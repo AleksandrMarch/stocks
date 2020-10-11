@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="accountDao" class="stocks.dao.impl.AccountDAOImpl">
+    </bean>
+
+    <bean name="accountService" class="stocks.service.AccountService">
+        <constructor-arg name="accountDAO" ref="accountDao"/>
+    </bean>
+
+    <bean name="companyDAO" class="stocks.dao.impl.CompanyDAOImpl">
+    </bean>
+
+    <bean name="companyService" class="stocks.service.CompanyService">
+        <constructor-arg name="companyDAO" ref="companyDAO"/>
+    </bean>
+
+    <bean name="stockManager" class="stocks.service.StockManager">
+    </bean>
+
+</beans>

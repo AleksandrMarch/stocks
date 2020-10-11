@@ -1,0 +1,25 @@
+# Intellij
+/.idea/*
+*.iml
+
+# Maven
+log/
+target/
+
+backend/src/main/resources/public/
+
+frontend/.DS_Store
+frontend/node/node_modules
+frontend/node_modules
+frontend/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+gateway/src/main/resources/public
