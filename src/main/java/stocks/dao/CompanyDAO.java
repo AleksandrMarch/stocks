@@ -1,4 +1,8 @@
 package stocks.dao;
 
-public interface CompanyDAO<T,K> extends BaseDAO<T,K> {
+import stocks.model.Company;
+
+import java.util.UUID;
+
+public interface CompanyDAO extends BaseDAO<Company,UUID> {
 }

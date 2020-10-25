@@ -6,7 +6,7 @@ import java.util.*;
 public class Account {
 
   private UUID id;
-  private Map<String, Stock> stockList = new HashMap<>();
+  private List<Stock> stockList = new ArrayList<>();
   private BigDecimal balance;
   private Currency currency;
 
@@ -20,7 +20,7 @@ public class Account {
     return id;
   }
 
-  public Map<String, Stock> getStockList() {
+  public List<Stock> getStockList() {
     return stockList;
   }
 
@@ -50,13 +50,19 @@ public class Account {
     System.out.printf("Валюта %s \n", currency);
     System.out.print("--- Список Акций --- \n");
 
-    stockList.forEach((companyName, stock) -> {
-      System.out.printf(
-          "Сомпания %s Количество %d Цена акции %s \n",
-          companyName,
-          stock.getAmount(),
-          stock.getCompany().getPrice()
-      );
-    });
+    stockList.forEach((stock) -> System.out.printf(
+        "Сомпания %s Количество %d Цена акции %s \n",
+        stock.getCompany().getName(),
+        stock.getAmount(),
+        stock.getCompany().getPrice()
+    ));
+  }
+
+  public Stock getStockByCompanyName(String companyName) {
+    for (Stock stock : stockList) {
+      if (stock.getCompany().getName().equals(companyName)) return stock;
+    }
+
+    return null;
   }
 }

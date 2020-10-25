@@ -17,11 +17,11 @@ public class StockManager {
       throw new RuntimeException("Не хватает средств");
     }
 
-    Stock stock = account.getStockList().get(company.getName());
+    Stock stock = account.getStockByCompanyName(company.getName());
 
     if (stock == null) {
       stock = new Stock(company, order.getAmount());
-      account.getStockList().put(company.getName(), stock);
+      account.getStockList().add(stock);
     } else {
       stock.setAmount(stock.getAmount() + order.getAmount());
     }

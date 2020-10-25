@@ -4,12 +4,12 @@ import stocks.dao.BaseDAO;
 
 import java.util.*;
 
-public class BaseDAOImpl<T,K> implements BaseDAO<T,K> {
+public class BaseDAOImpl<K,T> implements BaseDAO<K,T> {
 
   private Map<T, K> elements = new HashMap<>();
 
   @Override
-  public K read(T id) {
+  public K getById(T id) {
     return elements.get(id);
   }
 
