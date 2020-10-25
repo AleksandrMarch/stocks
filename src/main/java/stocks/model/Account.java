@@ -3,6 +3,9 @@ package stocks.model;
 import java.math.*;
 import java.util.*;
 
+/**
+ * Счет
+ */
 public class Account {
 
   private UUID id;

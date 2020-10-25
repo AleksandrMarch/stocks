@@ -2,6 +2,9 @@ package stocks.model;
 
 import java.util.UUID;
 
+/**
+ * Заказ на действие над акцией
+ */
 public class Order {
 
   private UUID id;
