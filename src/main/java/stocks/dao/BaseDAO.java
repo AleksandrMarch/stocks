@@ -2,14 +2,14 @@ package stocks.dao;
 
 import java.util.*;
 
-public interface BaseDAO <T, K> {
+public interface BaseDAO <T,K> {
 
-  K read(T id);
+  T getById(K id);
 
-  void save(T id, K object);
+  void save(K id, T object);
 
-  void delete(T id);
+  void delete(K id);
 
-  Collection<K> getAll();
+  Collection<T> getAll();
 
 }

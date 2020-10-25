@@ -1,6 +1,9 @@
 package stocks.dao.impl;
 
 import stocks.dao.CompanyDAO;
+import stocks.model.Company;
 
-public class CompanyDAOImpl<T,K> extends BaseDAOImpl<T,K> implements CompanyDAO<T,K> {
+import java.util.UUID;
+
+public class CompanyDAOImpl extends BaseDAOImpl<Company, UUID> implements CompanyDAO {
 }

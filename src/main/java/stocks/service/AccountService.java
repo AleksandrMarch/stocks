@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class AccountService {
 
-  private AccountDAO<UUID,Account> accountDAO;
+  private AccountDAO accountDAO;
 
   public AccountService(AccountDAO accountDAO) {
     this.accountDAO = accountDAO;
@@ -18,6 +18,6 @@ public class AccountService {
   }
 
   public Account findById(UUID id) {
-    return accountDAO.read(id);
+    return accountDAO.getById(id);
   }
 }
