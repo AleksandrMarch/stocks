@@ -1,9 +1,11 @@
 package stocks.dao.impl;
 
+import org.springframework.stereotype.Repository;
 import stocks.dao.BaseDAO;
 
 import java.util.*;
 
+@Repository
 public class BaseDAOImpl<K,T> implements BaseDAO<K,T> {
 
   private Map<T, K> elements = new HashMap<>();

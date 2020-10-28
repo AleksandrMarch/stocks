@@ -1,5 +1,8 @@
 package stocks.model;
 
+/**
+ * Акция
+ */
 public class Stock {
 
   private Company company;

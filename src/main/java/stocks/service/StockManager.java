@@ -1,11 +1,20 @@
 package stocks.service;
 
+import org.springframework.stereotype.Service;
 import stocks.model.*;
 
 import java.math.BigDecimal;
 
+/**
+ * Управляет упорециями на бирже
+ */
+@Service
 public class StockManager {
 
+  /**
+   * Купить акции
+   * @param order - заказ
+   */
   public void buyStock(Order order) {
     Company company = order.getCompany();
     Account account = order.getAccount();

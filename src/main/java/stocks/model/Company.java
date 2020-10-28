@@ -3,6 +3,9 @@ package stocks.model;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+/**
+ * Компания
+ */
 public class Company {
 
   private UUID id;
