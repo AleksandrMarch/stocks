@@ -8,8 +8,17 @@ import java.util.UUID;
 public class Order {
 
   private UUID id;
+  /**
+   * компания, с которой происходит операция
+   */
   private Company company;
+  /**
+   * количество акций для операции
+   */
   private int amount;
+  /**
+   * счет для операции
+   */
   private Account account;
 
   public Order(UUID id, Company company, int amount, Account account) {

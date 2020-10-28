@@ -5,7 +5,13 @@ package stocks.model;
  */
 public class Stock {
 
+  /**
+   * Компания, к которой принадлежит акция
+   */
   private Company company;
+  /**
+   * количество акций
+   */
   private int amount;
 
   public Stock(Company company, int amount) {
