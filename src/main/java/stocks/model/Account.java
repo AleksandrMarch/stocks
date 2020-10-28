@@ -9,8 +9,17 @@ import java.util.*;
 public class Account {
 
   private UUID id;
+  /**
+   * Список акций на счете
+   */
   private List<Stock> stockList = new ArrayList<>();
+  /**
+   * баланс счета
+   */
   private BigDecimal balance;
+  /**
+   * валюта счета
+   */
   private Currency currency;
 
   public Account(UUID id, BigDecimal balance, Currency currency) {

@@ -42,8 +42,5 @@ public class Application {
 
     //печатаем инфо аккаунта
     account.printAccountInfo();
-
-    //печатаем значение из application.properties
-    context.getBean(TestPropertyService.class).printProperty();
   }
 }

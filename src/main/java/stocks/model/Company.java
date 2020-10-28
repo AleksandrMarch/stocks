@@ -9,7 +9,13 @@ import java.util.UUID;
 public class Company {
 
   private UUID id;
+  /**
+   * название компании
+   */
   private String name;
+  /**
+   * цена акции компании
+   */
   private BigDecimal price;
 
   public Company(UUID id, String name, BigDecimal price) {
